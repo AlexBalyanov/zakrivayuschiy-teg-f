@@ -12,5 +12,29 @@
 
 .page {
   min-inline-size: 320px;
+  max-inline-size: 700px;
   min-block-size: 100dvb;
+  font-family: var(--font-main), sans-serif;
+  font-variation-settings: "wght" var(--font-weight-text);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+  font-family: var(--font-accent);
+  min-block-size: var(--section-height);
+  max-inline-size: var( --section-width);
+  margin-block-start: 102px;
+  border: 2px solid #000000;
+}
+
+.header__title {
+  font-size: var(--font-size-title);
+}
+
+.header__subtitle {
+  font-size: var(--font-size-subtitle);
 }

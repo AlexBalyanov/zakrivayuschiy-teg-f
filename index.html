@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Закрывающий тег</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
@@ -11,8 +12,52 @@
     <link rel="stylesheet" href="./styles/animations.css" />
   </head>
   <body class="page">
-    <header class="header"></header>
-    <main></main>
+    <header class="header">
+      <h1 class="header__title">
+        &lt;/HTML&gt;
+      </h1>
+      <h2 class="header__subtitle">
+        закрывающий тег
+      </h2>
+    </header>
+    <main>
+      <section class="cards">
+        <article class="card">
+          <ul class="card__list">
+            <li class="card__item">
+              <h2 class="card__title">
+                Фритрек и нулевой спринт: Подготовка к работе
+              </h2>
+              <img 
+              class="card__image" 
+              src="" 
+              alt="" 
+              loading="lazy">
+              <p class="card__text">
+                Это было самое начало пути. На этом этапе важно было проникнуться 
+                основами и настроиться на учёбу. И, возможно, подумать, как новые 
+                знания могут повлиять на ваше будущее.
+              </p>
+              <p class="card__text">
+                Место для ваших воспоминаний о начале обучения.
+              </p>
+              <button class="card__icon-button" type="button">
+                
+              </button>
+              <button class="card__like-button" type="button">
+                Like
+              </button>
+            </li>
+          </ul>
+        </article>
+
+      </section>
+
+
+      <!-- <svg viewBox="0 0 39 39" width="39" height="39">
+        <use href="svg/floppy.svg#floppy"/>
+      </svg> -->
+    </main>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
