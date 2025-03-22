@@ -56,6 +56,7 @@
 }
 
 .card__item {
+  position: relative;
   display: flex;
   flex-direction: column;
   row-gap: 27px;
@@ -75,6 +76,29 @@
   height: 100%;
 }
 
+.card__item::after {
+  content: "</HTML>";
+  position: absolute;
+  inset-inline-end: var(--card-label-pos);
+  inset-block-start: 23px;
+  font-family: var(--font-accent);
+  font-size: var(--font-size-small);
+  max-inline-size: 98px;
+  text-shadow:
+    -1px 0 var(--main-color), 
+    0 1px var(--main-color), 
+    1px 0 var(--main-color), 
+    0 -1px var(--main-color);
+  mix-blend-mode: hard-light;
+}
+
+@supports (text-stroke: 1px var(--main-color)) or (-webkit-text-stroke: 1px var(--main-color)) {
+  .card__item::after {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--main-color);
+  }
+}
+
 .card__text {
   padding-inline: 27px;
 }
@@ -92,12 +116,29 @@
   border: none;
 }
 
-.card__like-button {
+.button-decore {
   font-family: var(--font-accent);
   font-size: var(--font-size-small);
+  background: none;
+}
+
+.card__like-button {
   inline-size: 130px;
   block-size: 38px;
   margin-inline-end: 25px;
-  background: none;
+}
 
+.save {
+
+}
+
+.save__button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.save__button-icon {
+  block-size: 28px;
+  aspect-ratio: 1;
 }

@@ -15,4 +15,5 @@
   --section-width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
   --header-height: clamp(20.4375rem, 19.5352rem + 3.8498vw, 23rem);
   --card-height: clamp(47.5rem, 43.0986rem + 18.7793vw, 60rem);
+  --card-label-pos: clamp(0.6875rem, 0.3794rem + 1.3146vw, 1.5625rem);
 }
