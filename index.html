@@ -62,14 +62,22 @@
         </article>
       </section>
       <section class="save">
-        <button class="save__button button-decore">
+        <button class="save__button button-decore" onclick="window['save-dialog'].showModal()">
            <svg class="save__button-icon" viewBox="0 0 39 39" width="39" height="39">
               <use href="svg/floppy.svg#floppy"/>
           </svg>
           Сохранить на память
         </button>
-        <dialog class="save__dialog">
-
+        <dialog class="save__dialog" id="save-dialog">
+          <svg class="save__dialog-icon" viewBox="0 0 39 39" width="39" height="39">
+            <use href="svg/floppy.svg#floppy"/>
+        </svg>
+          <h2 class="save__dialog-title">
+            Вставьте дискету, чтобы продолжить
+          </h2>
+          <button class="save__dialog-close-button button-decore" onclick="window['save-dialog'].close()">
+            ok
+          </button>
         </dialog>
       </section>
 

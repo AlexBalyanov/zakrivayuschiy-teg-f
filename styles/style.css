@@ -18,6 +18,9 @@
   font-size: var(--font-size-main);
   max-inline-size: var( --section-width);
   font-variation-settings: "wght" var(--font-weight-normal);
+  background-color: var(--main-color);
+  background-image: var(--page-gradient);
+  background-size: cover;
 }
 
 .header {
@@ -27,6 +30,7 @@
   align-items: center;
   row-gap: 20px;
   font-family: var(--font-accent);
+  background-color: var(--main-color);
   min-block-size: var(--header-height);
   margin-block-start: 102px;
   border: var(--section-border);
@@ -43,6 +47,7 @@
 
 .cards {
   margin-block-start: 100px;
+  background-color: var(--main-color);
 }
 
 .card {
@@ -90,6 +95,7 @@
     1px 0 var(--main-color), 
     0 -1px var(--main-color);
   mix-blend-mode: hard-light;
+  opacity: 0.5;
 }
 
 @supports (text-stroke: 1px var(--main-color)) or (-webkit-text-stroke: 1px var(--main-color)) {
@@ -124,21 +130,70 @@
 
 .card__like-button {
   inline-size: 130px;
-  block-size: 38px;
+  min-block-size: 38px;
   margin-inline-end: 25px;
 }
 
 .save {
-
+  display: flex;
+  justify-content: center;
+  margin-block: 52px 100px;
 }
 
 .save__button {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  row-gap: 8px;
+  inline-size: var(--save-button-width);
+  min-block-size: var(--save-button-height);
+  background-color: var(--main-color);
 }
 
 .save__button-icon {
   block-size: 28px;
   aspect-ratio: 1;
+}
+
+.save__dialog[open] {
+  display: grid;
+}
+
+.save__dialog {
+  grid-template-columns: min-content 1fr;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+  row-gap: 30px;
+  font-size: var(--font-size-small);
+  padding: 30px var(--dialog-padding);
+  max-inline-size: var(--dialog-width);
+}
+
+.save__dialog::backdrop {
+  background-color: #000000;
+  opacity: 0.75;
+}
+
+.save__dialog-title {
+  font-family: var(--font-accent);
+  font-size: var(--font-size-small);
+  text-transform: uppercase;
+  line-height: 150%;
+}
+
+.save__dialog-close-button {
+  grid-column: span 2;
+  inline-size: 100%;
+  text-transform: uppercase;
+  min-block-size: 38px;
+}
+
+
+@media (width >= 768px) {
+  .save__button {
+    flex-direction: row;
+    column-gap: 8px;
+  }
 }
