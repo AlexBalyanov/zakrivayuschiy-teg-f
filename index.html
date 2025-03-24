@@ -54,7 +54,7 @@
                 </svg>                
               </button>
               <button class="card__like-button button-decore" type="button">
-                Like
+                <span class="button__text">Like</span>
               </button>
             </div>
             </li>
@@ -66,7 +66,7 @@
            <svg class="save__button-icon" viewBox="0 0 39 39" width="39" height="39">
               <use href="svg/floppy.svg#floppy"/>
           </svg>
-          Сохранить на память
+          <span class="button__text">Сохранить на память</span>
         </button>
         <dialog class="save__dialog" id="save-dialog">
           <svg class="save__dialog-icon" viewBox="0 0 39 39" width="39" height="39">
@@ -76,11 +76,10 @@
             Вставьте дискету, чтобы продолжить
           </h2>
           <button class="save__dialog-close-button button-decore" onclick="window['save-dialog'].close()">
-            ok
+            <span class="button__text">ok</span>
           </button>
         </dialog>
       </section>
-
     </main>
     <script src="./scripts/like.js"></script>
   </body>

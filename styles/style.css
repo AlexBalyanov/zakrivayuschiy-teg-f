@@ -14,13 +14,14 @@
   min-inline-size: 320px;
   max-inline-size: 700px;
   min-block-size: 100dvb;
-  font-family: var(--font-main), sans-serif;
+  font-family: var(--font-main), Arial, Helvetica, sans-serif;
   font-size: var(--font-size-main);
   max-inline-size: var( --section-width);
   font-variation-settings: "wght" var(--font-weight-normal);
   background-color: var(--main-color);
   background-image: var(--page-gradient);
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .header {
@@ -51,8 +52,8 @@
 }
 
 .card {
-  min-block-size: var(--card-height);
   border: var(--section-border);
+  line-height: 21px;
 }
 
 .card__list {
@@ -115,23 +116,66 @@
   align-items: center;
   justify-content: center;
   align-self: flex-end;
+  margin-block-end: 25px;
 }
 
 .card__icon-button {
   background: none;
   border: none;
+  min-block-size: 38px;
+  border: 2px solid transparent;
+  transition: border 0.3s ease;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--accent-color);
 }
 
 .button-decore {
+  position: relative;
   font-family: var(--font-accent);
   font-size: var(--font-size-small);
-  background: none;
+  background-color: var(--main-color);
+  transition: box-shadow 0.3s ease;
+}
+
+.button-decore::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--accent-color);
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.button-decore:hover::after {
+  transform: scaleX(1);
+}
+
+.button-decore:focus {
+  outline: none;
+}
+
+.button-decore:focus-visible {
+  box-shadow: 2px 2px 0 var(--accent-color);
 }
 
 .card__like-button {
   inline-size: 130px;
   min-block-size: 38px;
   margin-inline-end: 25px;
+}
+
+.button__text {
+  position: relative;
+  z-index: 2;
+  color: var(--main-color);
+  mix-blend-mode: difference;
 }
 
 .save {
@@ -148,7 +192,6 @@
   row-gap: 8px;
   inline-size: var(--save-button-width);
   min-block-size: var(--save-button-height);
-  background-color: var(--main-color);
 }
 
 .save__button-icon {
@@ -174,6 +217,13 @@
 .save__dialog::backdrop {
   background-color: #000000;
   opacity: 0.75;
+}
+
+.save__button-icon {
+  fill: var(--main-color);
+  position: relative;
+  z-index: 2;
+  mix-blend-mode: difference;
 }
 
 .save__dialog-title {

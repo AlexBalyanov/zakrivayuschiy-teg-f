@@ -9,16 +9,16 @@
   --font-weght-bold: 700;
 
   --main-color: #FFFFFF;
+  --accent-color: #000000;
   --page-gradient:
-  repeating-linear-gradient(to right, #d3d3d3 0px 2px, #d3d3d300 2px 4px), 
-  repeating-linear-gradient(to top, #d3d3d3 0px 2px, #d3d3d300 2px 4px),
+  repeating-linear-gradient(to right, #d3d3d3 0px 2px, transparent 2px 4px), 
+  repeating-linear-gradient(to top, #d3d3d3 0px 2px, transparent 2px 4px),
   linear-gradient(to bottom, #e7e7e7, #1a1a1a);
 
   --section-border: 2px solid #000000;
 
   --section-width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
   --header-height: clamp(20.4375rem, 19.5352rem + 3.8498vw, 23rem);
-  --card-height: clamp(47.5rem, 43.0986rem + 18.7793vw, 60rem);
   --card-label-pos: clamp(0.6875rem, 0.3794rem + 1.3146vw, 1.5625rem);
   --save-button-width: clamp(19.125rem, 18.0467rem + 4.6009vw, 22.1875rem);
   --save-button-height: clamp(3.4375rem, 5.8882rem + -2.723vw, 5.25rem);
