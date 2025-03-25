@@ -135,10 +135,6 @@
   border: 2px solid var(--accent-color);
 }
 
-.sparks {
-  opacity: 0;
-}
-
 .card__icon-button .main-body {
   transition: fill 0.3s linear;
 }
@@ -165,6 +161,39 @@
 .card__icon-button:active .core {
   fill: var(--heart-main-color);
   transition: fill 0.3s linear;
+}
+
+.card__icon-button .is-liked .core {
+  fill: var(--heart-main-color);
+  transition: fill 0.3s linear;
+}
+
+.card__icon-button .is-liked .main-body {
+  fill: var(--heart-main-color);
+  transition: 0.3s linear 0.05s;
+}
+
+.card__icon-button .is-liked .contour {
+  fill: var(--heart-main-color);
+  transition: 0.3s linear 0.06s;
+}
+
+.card__icon-button .contour {
+  fill: var(--accent-color);
+  transition: 0.1s linear;
+}
+
+.card__icon-button .is-liked .heart {
+  animation: heart-scale 0.3s ease-in 0.1s;
+  transform-origin: center;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.card__icon-button .is-liked .sparks {
+  animation: heart-sparks 0.3s ease-in 0.3s;
 }
 
 .button-decore {
