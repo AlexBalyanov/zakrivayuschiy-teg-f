@@ -21,7 +21,6 @@
 
   --section-border: 2px solid #000000;
 
-  --section-width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
   --header-height: clamp(20.4375rem, 19.5352rem + 3.8498vw, 23rem);
   --card-label-pos: clamp(0.6875rem, 0.3794rem + 1.3146vw, 1.5625rem);
   --save-button-width: clamp(19.125rem, 18.0467rem + 4.6009vw, 22.1875rem);

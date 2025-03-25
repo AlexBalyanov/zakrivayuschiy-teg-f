@@ -1,22 +1,9 @@
-/* Здесь вы напишете основную часть стилей страницы.
-
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
-
-*/
-
 .page {
   min-inline-size: 320px;
   max-inline-size: 700px;
   min-block-size: 100dvb;
   font-family: var(--font-main), Arial, Helvetica, sans-serif;
   font-size: var(--font-size-main);
-  max-inline-size: var( --section-width);
   font-variation-settings: "wght" var(--font-weight-normal);
   background-color: var(--main-color);
   background-image: var(--page-gradient);
@@ -34,6 +21,7 @@
   background-color: var(--main-color);
   min-block-size: var(--header-height);
   margin-block-start: 102px;
+  margin-block-end: 100px;
   border: var(--section-border);
 }
 
@@ -47,10 +35,13 @@
 }
 
 .card {
-  margin-block-start: 100px;
   background-color: var(--main-color);
   border: var(--section-border);
   line-height: 21px;
+}
+
+.card:not(:last-child) {
+  margin-block-end: 50px;
 }
 
 .card__title {
@@ -67,7 +58,7 @@
 }
 
 .card__item::after {
-  content: "</HTML>";
+  content: attr(data-title);
   position: absolute;
   inset-inline-end: var(--card-label-pos);
   inset-block-start: 20px;
@@ -96,10 +87,13 @@
   object-position: center;
   width: 100%;
   height: 100%;
+  aspect-ratio: 1;
+  border-block-end: var(--section-border);
+  border-block-start: var(--section-border);
 }
 
 .card__text {
-  padding-inline: 27px;
+  padding-inline: 25px;
 }
 
 .card__buttons {
@@ -268,7 +262,7 @@
 }
 
 .save__dialog::backdrop {
-  background-color: #000000;
+  background-color: var(--accent-color);
   opacity: 0.75;
 }
 
@@ -292,7 +286,6 @@
   text-transform: uppercase;
   min-block-size: 38px;
 }
-
 
 @media (width >= 768px) {
   .save__button {
