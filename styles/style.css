@@ -2,7 +2,7 @@
   min-inline-size: 320px;
   max-inline-size: 700px;
   min-block-size: 100dvb;
-  font-family: var(--font-main), Arial, Helvetica, sans-serif;
+  font-family: var(--font-main);
   font-size: var(--font-size-main);
   font-variation-settings: "wght" var(--font-weight-normal);
   background-color: var(--main-color);
@@ -64,7 +64,7 @@
   inset-block-start: 20px;
   font-family: var(--font-accent);
   font-size: var(--font-size-small);
-  max-inline-size: 98px;
+  max-inline-size: 200px;
   text-shadow:
     -1px 0 var(--main-color), 
     0 1px var(--main-color), 
