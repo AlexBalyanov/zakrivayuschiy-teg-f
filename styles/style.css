@@ -64,7 +64,7 @@
   inset-block-start: 20px;
   font-family: var(--font-accent);
   font-size: var(--font-size-small);
-  max-inline-size: 200px;
+  max-inline-size: 300px;
   text-shadow:
     -1px 0 var(--main-color), 
     0 1px var(--main-color), 
@@ -90,6 +90,22 @@
   aspect-ratio: 1;
   border-block-end: var(--section-border);
   border-block-start: var(--section-border);
+}
+
+.literally-me-image {
+
+}
+
+.old-image {
+
+}
+
+.this-is-fine-image {
+
+}
+
+.infinity-gauntlet-image {
+  
 }
 
 .card__text {
@@ -187,6 +203,7 @@
   font-family: var(--font-accent);
   font-size: var(--font-size-small);
   background-color: var(--main-color);
+  border: var(--section-border);
   transition: box-shadow 0.3s ease;
 }
 
