@@ -1,6 +1,6 @@
 :root {
   --font-main: "Inter-Variable", Arial, Helvetica, sans-serif;
-  --font-accent: "PressStart2P", sans-serif;
+  --font-accent: "PressStart2P", fantasy, sans-serif;
   --font-size-title: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   --font-size-subtitle: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   --font-size-main: 18px;
@@ -21,7 +21,7 @@
 
   --section-border: 2px solid #000000;
 
-  --header-height: clamp(20.4375rem, 19.5352rem + 3.8498vw, 23rem);
+  --header-padding: clamp(7.4375rem, 7.2614rem + 0.7512vw, 7.9375rem);
   --card-label-pos: clamp(0.6875rem, 0.3794rem + 1.3146vw, 1.5625rem);
   --save-button-width: clamp(19.125rem, 18.0467rem + 4.6009vw, 22.1875rem);
   --save-button-height: clamp(3.4375rem, 5.8882rem + -2.723vw, 5.25rem);

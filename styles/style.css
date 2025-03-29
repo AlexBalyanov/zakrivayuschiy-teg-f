@@ -22,7 +22,7 @@
   border: var(--section-border);
   font-family: var(--font-accent);
   background-color: var(--main-color);
-  min-block-size: var(--header-height);
+  padding-block: var(--header-padding);
 }
 
 .header__title {
